@@ -1,6 +1,7 @@
 proxy:
   build: proxy
   container_name: proxyfier
+  restart: always
   ports:
   - 3128
   - 3129
@@ -10,9 +11,9 @@ proxy:
 #worker:
 #  build: worker
 #  container_name: worker
-#  command: /bin/bash -c 'while true;do curl google.fr -v ;sleep 1;done'
-dns:
-  build: dns
-  net: host
-  container_name: dns
+#  command: /bin/bash -c 'while true;do curl www.google.fr -v > /dev/null ;sleep 1;done'
+#dns:
+#  build: dns
+#  net: host
+#  container_name: dns
 
